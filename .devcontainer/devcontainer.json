@@ -1,22 +1,39 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
 {
-	"name": "Node.js",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/javascript-node:4-24-trixie"
+  "name": "Node.js",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:4-24-trixie",
 
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
+  "customizations": {
+    "vscode": {
+      "settings": {
+        // 🎨 Theme
+        "workbench.colorTheme": "Default Dark Modern",
+        "workbench.iconTheme": "material-icon-theme",
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+        // 🔍 Zoom with scroll (Ctrl + Mouse Wheel)
+        "editor.mouseWheelZoom": true,
 
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "yarn install",
+        // ✨ Smooth & interactive feel
+        "editor.smoothScrolling": true,
+        "workbench.list.smoothScrolling": true,
+        "editor.cursorBlinking": "smooth",
+        "editor.cursorSmoothCaretAnimation": "on",
 
-	// Configure tool-specific properties.
-	// "customizations": {},
+        // 🧠 Better UX
+        "editor.minimap.enabled": true,
+        "editor.fontSize": 14,
+        "window.zoomLevel": 0,
 
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+        // 🖱️ Hover & suggestions
+        "editor.hover.enabled": true,
+        "editor.quickSuggestions": true,
+        "editor.parameterHints.enabled": true
+      },
+
+      "extensions": [
+        "PKief.material-icon-theme",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
 }
